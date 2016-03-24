@@ -14,4 +14,4 @@ if [[ -z $RAM_SIZE ]] || [[ -z $IMAGE_PATH ]]; then
 	exit
 fi
 
-qemu-system-x86_64 -net nic,model=rtl8139 $PORTMAP -m $RAM_SIZE -localtime -smp 2 -k en-us -hda $IMAGE_PATH  -nographic
+qemu-system-x86_64 -net nic,model=rtl8139 $PORTMAP -m $RAM_SIZE -localtime -smp 2 -k en-us -vnc :0 -hda $IMAGE_PATH  -nographic
