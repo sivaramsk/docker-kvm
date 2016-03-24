@@ -5,10 +5,4 @@ RUN apt-get -y update && DEBIAN_FRONTEND=noninteractive apt-get -y install kvm q
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-EXPOSE 3389
-EXPOSE 5900
-
-VOLUME /etc/libvirt
-VOLUME /var/lib/libvirt
-
 CMD /entrypoint.sh
